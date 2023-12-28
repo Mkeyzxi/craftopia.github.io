@@ -1,0 +1,402 @@
+    /* global css */
+    
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+    * {
+        font-family: 'Quicksand', sans-serif;
+    }
+    
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    
+     :root {
+        --primary: #E48F45;
+        --hover: #29244d;
+        --hover2: #ff2b95;
+        --white: #fff;
+    }
+    /* akhir global css */
+    /* index html */
+    /* header */
+    
+    header {
+        position: fixed;
+        left: 0;
+        right: 0;
+        height: 70px;
+        background-color: var(--white);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 3em;
+        box-sizing: border-box;
+    }
+    
+    header nav ul {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        column-gap: 20px;
+        padding: 5px;
+    }
+    
+    header nav ul li {
+        padding: 4px;
+    }
+    
+    header nav ul li a {
+        display: inline-block;
+        text-decoration: none;
+        box-sizing: border-box;
+        border-bottom: 3px solid rgba(0, 0, 0, 0);
+        color: var(--primary);
+    }
+    
+    header nav ul li:hover a {
+        box-sizing: border-box;
+        border-bottom: 3px solid black;
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+        transition: all .5s ease-in-out;
+        -webkit-transition: all .5s ease-in-out;
+        -moz-transition: all .5s ease-in-out;
+        -ms-transition: all .5s ease-in-out;
+        -o-transition: all .5s ease-in-out;
+    }
+    
+    header .contact {
+        display: flex;
+        column-gap: 1.2em;
+    }
+    
+    header .contact li {
+        list-style: none;
+    }
+    
+    header .contact li a {
+        color: black;
+    }
+    
+    header .contact li a:hover {
+        color: var();
+    }
+    
+    header .toggleMenu {
+        display: none;
+        height: 20px;
+        width: 30px;
+    }
+    
+    header .toggleMenu span {
+        display: block;
+        height: 4px;
+        width: 100%;
+        margin: 4px 0;
+        background-color: rgb(6, 5, 5);
+        border-radius: 110px;
+        -webkit-border-radius: 110px;
+        -moz-border-radius: 110px;
+        -ms-border-radius: 110px;
+        -o-border-radius: 110px;
+    }
+    /* akhir header */
+    /* main landing pagel */
+    
+    main {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    main section.sectionSatu {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin-top: 10%;
+        align-items: center;
+    }
+    
+    main section.sectionSatu .home {
+        width: 40%;
+    }
+    
+    main section.sectionSatu .home h2 {
+        font-size: 4em;
+    }
+    
+    main section.sectionSatu .home h2 span.font-warna {
+        color: var(--primary);
+    }
+    
+    main section.sectionSatu .home p {
+        font: 20px/30px normal normal arial, sans-serif;
+    }
+    
+    main section.sectionSatu .home a {
+        display: inline-block;
+        margin-top: 4%;
+        text-decoration: none;
+        padding: .5em 1.2em;
+        background-color: var(--primary);
+        color: var(--white);
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        border: 5px double var(--primary);
+    }
+    
+    main section.sectionSatu .home a:hover {
+        color: var(--hover);
+        background-color: var(--primary);
+        transition: all .5 ease-in;
+        -webkit-transition: all .5 ease-in;
+        -moz-transition: all .5 ease-in;
+        -ms-transition: all .5 ease-in;
+        -o-transition: all .5 ease-in;
+        border: 5px double var(--hover2);
+    }
+    
+    main section.sectionDua {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    
+    main section.sectionDua .about {
+        width: 30%;
+    }
+    
+    main section.sectionDua .about h3 {
+        font: 2em/12px normal normal arial, sans-serif;
+        text-align: center;
+        color: var(--primary);
+    }
+    
+    main section.sectionDua .about p {
+        font: 20px/30px normal normal arial, sans-serif;
+    }
+    
+    main section.sectionDua .about span.font-warna {
+        color: var(--primary);
+    }
+    /* main landing pagel */
+    /* main kontak  */
+    
+    main#kontakKu {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 92vh;
+    }
+    
+    main#kontakKu .pengantar {
+        width: 35%;
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+    }
+    
+    main#kontakKu .pengantar h2 {
+        text-align: center;
+    }
+    
+    main#kontakKu form {
+        width: 35%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 5px;
+    }
+    
+    main#kontakKu form input {
+        width: 100%;
+        height: 35px;
+        margin: 10px;
+        padding: 7px;
+        border: none;
+        border-bottom: 3px solid black;
+        box-sizing: border-box;
+    }
+    
+    main#kontakKu form input:hover {
+        border: none;
+        border-bottom: 3px solid var(--primary);
+        transition: all 0.5s ease-in-out .1s;
+        -webkit-transition: all 0.5s ease-out .1s;
+        -moz-transition: all 0.5s ease-out .1s;
+        -ms-transition: all 0.5s ease-out .1s;
+        -o-transition: all 0.5s ease-out .1s;
+        background-color: var(--white);
+    }
+    
+    main#kontakKu form button {
+        width: 100px;
+        padding: 7px;
+        margin: 29px;
+        border: 1px solid var(--primary);
+        background-color: var(--white);
+        color: var(--primary);
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+    }
+    
+    main#kontakKu form button:hover {
+        background-color: var(--primary);
+        color: var(--white);
+    }
+    /* akhir main kontak  */
+    /* akhir main */
+    /* footer */
+    
+    footer {
+        width: 100%;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--primary);
+    }
+    /* akhir footer */
+    /* akhir index html */
+    /* responsive */
+    
+    @media only screen and (max-width: 965px) {
+        main {
+            margin-top: 0px;
+        }
+        main section.sectionSatu {
+            flex-direction: column;
+        }
+        main section.sectionSatu .home {
+            width: 80%;
+        }
+        main section.sectionSatu .home h2 {}
+        main section.sectionSatu .home a {
+            display: flex;
+            justify-content: center;
+        }
+        main section.sectionSatu img {
+            margin: 100px 0 0 0;
+            width: 600px;
+        }
+        main section.sectionDua {
+            height: 400px;
+            flex-direction: column;
+        }
+        main section.sectionDua img {
+            order: 2;
+            display: none;
+        }
+        main section.sectionDua .about {
+            width: 80%;
+            order: 1;
+        }
+        /* kontak */
+        main#kontakKu {
+            width: 100%;
+        }
+        main#kontakKu .pengantar,
+        form {
+            width: 50% !important;
+        }
+        /* akhir kontak */
+    }
+    
+    @media only screen and (max-width: 725px) {
+        header .toggleMenu {
+            display: block;
+        }
+        header .logo h1 {
+            font-size: 1.7em;
+        }
+        header nav {
+            display: none;
+            position: absolute;
+            top: 70px;
+            right: 0;
+            background-color: rgba(228, 143, 69, 1);
+            height: 100vh;
+            width: 30vh;
+        }
+        header nav ul {
+            flex-direction: column;
+            position: absolute;
+            gap: 25px;
+        }
+        header nav ul li a {
+            color: var(--hover);
+        }
+        header .contact {
+            display: none;
+            flex-direction: row;
+            position: absolute;
+            gap: 20px;
+            top: 260px;
+            right: 42px;
+            width: 100px;
+            /* background-color: red; */
+        }
+        header .contact li a {
+            color: var(--hover);
+        }
+        main section.sectionSatu {
+            width: 100%;
+            flex-direction: column;
+        }
+        main section.sectionSatu .home {
+            width: 90%;
+            margin-top: 30px;
+        }
+        main section.sectionSatu .home h2 {
+            font-size: 2.5em;
+        }
+        main section.sectionSatu .home a {
+            display: flex;
+            justify-content: center;
+        }
+        main section.sectionSatu img {
+            margin: 50px 0 0 0;
+            width: 80%;
+        }
+        main section.sectionDua {
+            flex-direction: column;
+        }
+        main section.sectionDua img {
+            order: 2;
+            display: none;
+        }
+        main section.sectionDua .about {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            width: 100%;
+            order: 1;
+        }
+        main section.sectionDua .about p {
+            padding: 0px;
+            margin: 0;
+            padding: 20px;
+        }
+        /* kontak page */
+        main#kontakKu .pengantar,
+        form {
+            width: 70% !important;
+        }
+        /* akhir kontak page */
+    }
+    /* akhir responsive */
