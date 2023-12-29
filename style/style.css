@@ -272,6 +272,8 @@
         background-color: var(--primary);
     }
     /* akhir footer */
+    /* kombinasi warna di javascript */
+    /* akhir kombinasi warna di javascript */
     /* akhir index html */
     /* responsive */
     
@@ -331,7 +333,7 @@
             right: 0;
             background-color: rgba(228, 143, 69, 1);
             height: 100vh;
-            width: 30vh;
+            width: 70%;
         }
         header nav ul {
             flex-direction: column;
@@ -345,9 +347,9 @@
             display: none;
             flex-direction: row;
             position: absolute;
-            gap: 20px;
-            top: 260px;
-            right: 42px;
+            gap: 50px;
+            top: 270px;
+            right: 30%;
             width: 100px;
             /* background-color: red; */
         }
