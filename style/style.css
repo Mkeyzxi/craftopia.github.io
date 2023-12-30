@@ -236,10 +236,10 @@
         border: none;
         border-bottom: 3px solid var(--primary);
         transition: all 0.5s ease-in-out .1s;
-        -webkit-transition: all 0.5s ease-out .1s;
-        -moz-transition: all 0.5s ease-out .1s;
-        -ms-transition: all 0.5s ease-out .1s;
-        -o-transition: all 0.5s ease-out .1s;
+        -webkit-transition: all 0.5s ease-in-out .1s;
+        -moz-transition: all 0.5s ease-in-out .1s;
+        -ms-transition: all 0.5s ease-in-out .1s;
+        -o-transition: all 0.5s ease-in-out .1s;
         background-color: var(--white);
     }
     
@@ -303,14 +303,14 @@
     } */
     /* aniamasi saat web direstart */
     
-    @keyframes reloadSectionSatuHome {
+    @keyframes reloadKiri {
         0% {
             opacity: 0;
-            transform: translateX(-40px);
-            -webkit-transform: translateX(-40px);
-            -moz-transform: translateX(-40px);
-            -ms-transform: translateX(-40px);
-            -o-transform: translateX(-40px);
+            transform: translateX(-90px);
+            -webkit-transform: translateX(-90px);
+            -moz-transform: translateX(-90px);
+            -ms-transform: translateX(-90px);
+            -o-transform: translateX(-90px);
         }
         100% {
             opacity: 1;
@@ -322,14 +322,14 @@
         }
     }
     
-    @keyframes reloadSectionSatuImg {
+    @keyframes reloadKanan {
         0% {
             opacity: 0;
-            transform: translateX(40px);
-            -webkit-transform: translateX(40px);
-            -moz-transform: translateX(40px);
-            -ms-transform: translateX(40px);
-            -o-transform: translateX(40px);
+            transform: translateX(90px);
+            -webkit-transform: translateX(90px);
+            -moz-transform: translateX(90px);
+            -ms-transform: translateX(90px);
+            -o-transform: translateX(90px);
         }
         100% {
             opacity: 1;
@@ -341,19 +341,17 @@
         }
     }
     
-    .loadingAnimasiSectionSatuHome {
-        animation: reloadSectionSatuHome .5s ease-out forwards;
-        -webkit-animation: reloadSectionSatuHome .5s ease-out forwards;
+    .loadingAnimasiKiri {
+        animation: reloadKiri 1s ease-out forwards;
+        -webkit-animation: reloadKiri 1s ease-out forwards;
+        opacity: 1;
     }
     
-    .loadingAnimasiSectionSatuImg {
-        animation: reloadSectionSatuImg .5s ease-out forwards;
-        -webkit-animation: reloadSectionSatuImg .5s ease-out forwards;
+    .loadingAnimasiKanan {
+        animation: reloadKanan 1s ease-out forwards;
+        -webkit-animation: reloadKanan 1s ease-out forwards;
+        opacity: 1;
     }
-    /* akhir aniamasi saat web direstart */
-    /* akhir kombinasi warna di javascript */
-    /* akhir index html */
-    /* responsive */
     
     @media only screen and (max-width: 965px) {
         main {

@@ -7,6 +7,9 @@ const span2 = parent.querySelector('header .toggleMenu span:nth-child(2)');
 const span3 = parent.querySelector('header .toggleMenu span:nth-child(3)');
 const sectionSatuHome = parent.querySelector('main section.sectionSatu .home');
 const sectionSatuImg = parent.querySelector('main section.sectionSatu img');
+const sectionDuaImg = parent.querySelector('main section.sectionDua img');
+const sectionDuaH3 = parent.querySelector('main section.sectionDua h3');
+const sectionDuaP = parent.querySelector('main section.sectionDua p');
 // const sectionDua = parent.querySelector('main section.sectionDua');
 const linkMulaiEkspor = parent.querySelector('main section.sectionSatu a');
 let isOpen = false;
@@ -21,6 +24,7 @@ function toggleFunction() {
         span1.style.transition = 'all .2s ease-in 0s';
         span2.style.transition = 'all .2s ease-in 0s';
         span2.style.backgroundColor = 'rgba(0,0,0,0)';
+        span3.style.transition = 'all .2s ease-in 0s';
         span3.style.transform = 'rotate(-45deg)';
         span3.style.marginTop = '-16px';
         headerNav.style.display = 'block';
@@ -44,6 +48,31 @@ linkMulaiEkspor.onclick = function() {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-    sectionSatuHome.classList.add('loadingAnimasiSectionSatuHome');
-    sectionSatuImg.classList.add('loadingAnimasiSectionSatuImg');
+    sectionSatuHome.classList.add('loadingAnimasiKiri');
+    sectionSatuImg.classList.add('loadingAnimasiKanan');
+    sectionDuaImg.classList.add('loadingAnimasiKiri');
+    sectionDuaH3.classList.add('loadingAnimasiKanan');
+    sectionDuaP.classList.add('loadingAnimasiKiri');
+
+});
+
+
+
+window.addEventListener('scroll', () => {
+    const scroll = parseInt(window.scrollY);
+    console.log(scroll);
+
+    if (scroll > 120) {
+        sectionDuaImg.classList.add('loadingAnimasiKiri');
+    }
+    if (scroll > 140) {
+
+        sectionDuaH3.classList.add('loadingAnimasiKanan');
+        sectionDuaP.classList.add('loadingAnimasiKiri');
+
+    } else {
+        sectionDuaImg.classList.remove('loadingAnimasiKiri');
+        sectionDuaH3.classList.remove('loadingAnimasiKanan');
+        sectionDuaP.classList.remove('loadingAnimasiKiri');
+    }
 });
