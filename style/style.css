@@ -32,6 +32,7 @@
         align-items: center;
         padding: 0 3em;
         box-sizing: border-box;
+        z-index: 9999999;
     }
     
     header nav ul {
@@ -274,6 +275,82 @@
     }
     /* akhir footer */
     /* kombinasi warna di javascript */
+    /* .span1 {
+        transform: 'rotate(45deg)';
+        margin-top: '11px';
+        transition: 'all .1s ease-in 0s';
+        -webkit-transform: 'rotate(45deg)';
+        -moz-transform: 'rotate(45deg)';
+        -ms-transform: 'rotate(45deg)';
+        -o-transform: 'rotate(45deg)';
+    }
+    
+    .span2 {
+        background-color: 'rgba(0,0,0,0)';
+    }
+    
+    .span3 {
+        transform: 'rotate(-45deg)';
+        margin-top: '-16px';
+    }
+    
+    .headerNav {
+        display: 'block';
+    }
+    
+    .headerContact {
+        display: 'flex';
+    } */
+    /* aniamasi saat web direstart */
+    
+    @keyframes reloadSectionSatuHome {
+        0% {
+            opacity: 0;
+            transform: translateX(-40px);
+            -webkit-transform: translateX(-40px);
+            -moz-transform: translateX(-40px);
+            -ms-transform: translateX(-40px);
+            -o-transform: translateX(-40px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(0px);
+            -webkit-transform: translateX(0px);
+            -moz-transform: translateX(0px);
+            -ms-transform: translateX(0px);
+            -o-transform: translateX(0px);
+        }
+    }
+    
+    @keyframes reloadSectionSatuImg {
+        0% {
+            opacity: 0;
+            transform: translateX(40px);
+            -webkit-transform: translateX(40px);
+            -moz-transform: translateX(40px);
+            -ms-transform: translateX(40px);
+            -o-transform: translateX(40px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(0px);
+            -webkit-transform: translateX(0px);
+            -moz-transform: translateX(0px);
+            -ms-transform: translateX(0px);
+            -o-transform: translateX(0px);
+        }
+    }
+    
+    .loadingAnimasiSectionSatuHome {
+        animation: reloadSectionSatuHome .5s ease-out forwards;
+        -webkit-animation: reloadSectionSatuHome .5s ease-out forwards;
+    }
+    
+    .loadingAnimasiSectionSatuImg {
+        animation: reloadSectionSatuImg .5s ease-out forwards;
+        -webkit-animation: reloadSectionSatuImg .5s ease-out forwards;
+    }
+    /* akhir aniamasi saat web direstart */
     /* akhir kombinasi warna di javascript */
     /* akhir index html */
     /* responsive */
