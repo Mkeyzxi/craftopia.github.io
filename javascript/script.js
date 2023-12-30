@@ -4,7 +4,7 @@ const headerContact = document.querySelector(' header .contact');
 const span1 = parent.querySelector('header .toggleMenu span:nth-child(1)');
 const span2 = parent.querySelector('header .toggleMenu span:nth-child(2)');
 const span3 = parent.querySelector('header .toggleMenu span:nth-child(3)');
-
+const linkMulaiEkspor = parent.querySelector('main section.sectionSatu a');
 let isOpen = false;
 
 function toggleFunction() {
@@ -32,4 +32,8 @@ function toggleFunction() {
         headerContact.style.display = 'none';
 
     }
+}
+
+linkMulaiEkspor.onclick = function() {
+    linkMulaiEkspor.textContent = 'Gasskan';
 }
