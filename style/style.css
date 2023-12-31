@@ -342,14 +342,14 @@
     }
     
     .loadingAnimasiKiri {
-        animation: reloadKiri 1s ease-out forwards;
-        -webkit-animation: reloadKiri 1s ease-out forwards;
+        animation: reloadKiri .7s ease-out forwards;
+        -webkit-animation: reloadKiri .7s ease-out forwards;
         opacity: 1;
     }
     
     .loadingAnimasiKanan {
-        animation: reloadKanan 1s ease-out forwards;
-        -webkit-animation: reloadKanan 1s ease-out forwards;
+        animation: reloadKanan .7s ease-out forwards;
+        -webkit-animation: reloadKanan .7s ease-out forwards;
         opacity: 1;
     }
     

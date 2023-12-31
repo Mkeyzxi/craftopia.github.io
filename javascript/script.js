@@ -1,3 +1,4 @@
+// variabel file kontak
 const parent = document.body;
 const headerNav = document.querySelector('header nav');
 const headerContact = document.querySelector(' header .contact');
@@ -10,8 +11,9 @@ const sectionSatuImg = parent.querySelector('main section.sectionSatu img');
 const sectionDuaImg = parent.querySelector('main section.sectionDua img');
 const sectionDuaH3 = parent.querySelector('main section.sectionDua h3');
 const sectionDuaP = parent.querySelector('main section.sectionDua p');
-// const sectionDua = parent.querySelector('main section.sectionDua');
-const linkMulaiEkspor = parent.querySelector('main section.sectionSatu a');
+
+
+
 let isOpen = false;
 // responsive mobile
 function toggleFunction() {
@@ -39,24 +41,36 @@ function toggleFunction() {
         span3.style.marginTop = '';
         headerNav.style.display = 'none';
         headerContact.style.display = 'none';
-
     }
 }
-// ketika link diklik kata berubah
-linkMulaiEkspor.onclick = function() {
-    linkMulaiEkspor.textContent = 'Gasskan';
-}
-
+// animasi reload di file index landing page
 document.addEventListener("DOMContentLoaded", function() {
     sectionSatuHome.classList.add('loadingAnimasiKiri');
     sectionSatuImg.classList.add('loadingAnimasiKanan');
     sectionDuaImg.classList.add('loadingAnimasiKiri');
     sectionDuaH3.classList.add('loadingAnimasiKanan');
     sectionDuaP.classList.add('loadingAnimasiKiri');
-
 });
 
+// animasi reload di file kontak
+// variabel file kontak
+const parentKontak = document.getElementById('kontakKu');
+const pengantar = parentKontak.querySelector('.pengantar h2');
+const pembuka = parentKontak.querySelector('.pengantar p');
+const formNama = parentKontak.querySelector('main#kontakKu form')[0];
+const formEmail = parentKontak.querySelector('main#kontakKu form')[1];
+const formDeskripsi = parentKontak.querySelector('main#kontakKu form')[2];
+const buttonKontak = parentKontak.querySelector('main#kontakKu form button');
 
+document.addEventListener('DOMContentLoaded', () => {
+    pengantar.classList.add('loadingAnimasiKiri');
+    pembuka.classList.add('loadingAnimasiKanan');
+    formNama.classList.add('loadingAnimasiKiri');
+    formEmail.classList.add('loadingAnimasiKanan');
+    formDeskripsi.classList.add('loadingAnimasiKiri');
+    buttonKontak.classList.add('loadingAnimasiKanan');
+
+});
 
 window.addEventListener('scroll', () => {
     const scroll = parseInt(window.scrollY);
@@ -76,3 +90,9 @@ window.addEventListener('scroll', () => {
         sectionDuaP.classList.remove('loadingAnimasiKiri');
     }
 });
+
+// ketika link diklik kata berubah
+// const linkMulaiEkspor = document.querySelector('main section.sectionSatu a');
+// linkMulaiEkspor.onclick = () => {
+//     linkMulaiEkspor.innerHTML = 'Gasskan';
+// }
