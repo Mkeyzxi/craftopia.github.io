@@ -1,5 +1,6 @@
-// variabel file kontak
+// variabel pada file index atau landing page
 const parent = document.body;
+const header = document.getElementsByTagName('header');
 const headerNav = document.querySelector('header nav');
 const headerContact = document.querySelector(' header .contact');
 const toggleMenu = document.getElementById('toggleMenu');
@@ -8,6 +9,7 @@ const span2 = parent.querySelector('header .toggleMenu span:nth-child(2)');
 const span3 = parent.querySelector('header .toggleMenu span:nth-child(3)');
 const sectionSatuHome = parent.querySelector('main section.sectionSatu .home');
 const sectionSatuImg = parent.querySelector('main section.sectionSatu img');
+const sectionDua = parent.querySelector('section.sectionDua')
 const sectionDuaImg = parent.querySelector('main section.sectionDua img');
 const sectionDuaH3 = parent.querySelector('main section.sectionDua h3');
 const sectionDuaP = parent.querySelector('main section.sectionDua p');
@@ -16,7 +18,7 @@ const sectionDuaP = parent.querySelector('main section.sectionDua p');
 
 let isOpen = false;
 // responsive mobile
-function toggleFunction() {
+toggleMenu.addEventListener('click', () => {
     isOpen = !isOpen; // Mengubah nilai isOpen menjadi kebalikannya
 
     if (isOpen) {
@@ -42,7 +44,8 @@ function toggleFunction() {
         headerNav.style.display = 'none';
         headerContact.style.display = 'none';
     }
-}
+});
+
 // animasi reload di file index landing page
 document.addEventListener("DOMContentLoaded", function() {
     sectionSatuHome.classList.add('loadingAnimasiKiri');
@@ -52,38 +55,16 @@ document.addEventListener("DOMContentLoaded", function() {
     sectionDuaP.classList.add('loadingAnimasiKiri');
 });
 
-// animasi reload di file kontak
-// variabel file kontak
-const parentKontak = document.getElementById('kontakKu');
-const pengantar = parentKontak.querySelector('.pengantar h2');
-const pembuka = parentKontak.querySelector('.pengantar p');
-const formNama = parentKontak.querySelector('main#kontakKu form')[0];
-const formEmail = parentKontak.querySelector('main#kontakKu form')[1];
-const formDeskripsi = parentKontak.querySelector('main#kontakKu form')[2];
-const buttonKontak = parentKontak.querySelector('main#kontakKu form button');
-
-document.addEventListener('DOMContentLoaded', () => {
-    pengantar.classList.add('loadingAnimasiKiri');
-    pembuka.classList.add('loadingAnimasiKanan');
-    formNama.classList.add('loadingAnimasiKiri');
-    formEmail.classList.add('loadingAnimasiKanan');
-    formDeskripsi.classList.add('loadingAnimasiKiri');
-    buttonKontak.classList.add('loadingAnimasiKanan');
-
-});
-
+// scroll di bagian landing page
 window.addEventListener('scroll', () => {
-    const scroll = parseInt(window.scrollY);
-    console.log(scroll);
+    let scrollTop = parseInt(window.scrollY)
 
-    if (scroll > 120) {
+    if (scrollTop > 120) {
         sectionDuaImg.classList.add('loadingAnimasiKiri');
     }
-    if (scroll > 140) {
-
+    if (scrollTop > 140) {
         sectionDuaH3.classList.add('loadingAnimasiKanan');
         sectionDuaP.classList.add('loadingAnimasiKiri');
-
     } else {
         sectionDuaImg.classList.remove('loadingAnimasiKiri');
         sectionDuaH3.classList.remove('loadingAnimasiKanan');
@@ -91,8 +72,21 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// ketika link diklik kata berubah
-// const linkMulaiEkspor = document.querySelector('main section.sectionSatu a');
-// linkMulaiEkspor.onclick = () => {
-//     linkMulaiEkspor.innerHTML = 'Gasskan';
-// }
+// animasi pada file kontak
+// atribut untuk file kontak
+const parentKontak = document.getElementById('kontakKu');
+const pengantar = parentKontak.querySelector('.pengantar h2');
+const pembuka = parentKontak.querySelector('.pengantar p');
+const formNama = parentKontak.querySelector('main#kontakKu form')[0];
+const formEmail = parentKontak.querySelector('main#kontakKu form')[1];
+const formDeskripsi = parentKontak.querySelector('main#kontakKu form')[2];
+const buttonKontak = parentKontak.querySelector('main#kontakKu form button');
+// animasi untuk file kontak
+document.addEventListener('DOMContentLoaded', () => {
+    pengantar.classList.add('loadingAnimasiKiri');
+    pembuka.classList.add('loadingAnimasiKanan');
+    formNama.classList.add('loadingAnimasiKiri');
+    formEmail.classList.add('loadingAnimasiKanan');
+    formDeskripsi.classList.add('loadingAnimasiKiri');
+    buttonKontak.classList.add('loadingAnimasiKanan');
+})

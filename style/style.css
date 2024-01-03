@@ -81,7 +81,7 @@
     }
     
     header .contact li a:hover {
-        color: var();
+        color: var(--primary);
     }
     
     header .toggleMenu {
@@ -396,8 +396,12 @@
     }
     
     @media only screen and (max-width: 725px) {
+        header {
+            width: 100vw;
+        }
         header .toggleMenu {
             display: block;
+            z-index: 99999;
         }
         header .logo h1 {
             font-size: 1.7em;
@@ -408,7 +412,7 @@
             top: 70px;
             right: 0;
             background-color: rgba(228, 143, 69, 1);
-            height: 100vh;
+            height: 115vh;
             width: 70%;
         }
         header nav ul {
@@ -432,6 +436,9 @@
         header .contact li a {
             color: var(--hover);
         }
+        main section {
+            width: 100vw !important;
+        }
         main section.sectionSatu {
             width: 100%;
             flex-direction: column;
@@ -453,6 +460,8 @@
         }
         main section.sectionDua {
             flex-direction: column;
+            /* width: 100px; */
+            /* background-color: red; */
         }
         main section.sectionDua img {
             order: 2;
