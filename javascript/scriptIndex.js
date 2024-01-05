@@ -57,36 +57,30 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // scroll di bagian landing page
 window.addEventListener('scroll', () => {
-    let scrollTop = parseInt(window.scrollY)
-
-    if (scrollTop > 120) {
+    let scrollTop = parseInt(window.scrollY) * 50;
+    if (scrollTop > 0) {
+        parent.querySelector('header').style.boxShadow = '0px 0px 100px 0px #29244d'
+        parent.querySelector('header').style.transition = 'all .3s ease-out';
+    }
+    if (scrollTop > 50) {
+        parent.querySelector('header').style.boxShadow = '0 0px 15px #29244d'
         sectionDuaImg.classList.add('loadingAnimasiKiri');
     }
     if (scrollTop > 140) {
+        sectionDuaImg.classList.add('loadingAnimasiKiri');
+        parent.querySelector('header').style.boxShadow = '0 0px 15px #29244d';
         sectionDuaH3.classList.add('loadingAnimasiKanan');
         sectionDuaP.classList.add('loadingAnimasiKiri');
     } else {
         sectionDuaImg.classList.remove('loadingAnimasiKiri');
         sectionDuaH3.classList.remove('loadingAnimasiKanan');
         sectionDuaP.classList.remove('loadingAnimasiKiri');
+        parent.querySelector('header').style.boxShadow = ''
     }
 });
 
-// animasi pada file kontak
-// atribut untuk file kontak
-const parentKontak = document.getElementById('kontakKu');
-const pengantar = parentKontak.querySelector('.pengantar h2');
-const pembuka = parentKontak.querySelector('.pengantar p');
-const formNama = parentKontak.querySelector('main#kontakKu form')[0];
-const formEmail = parentKontak.querySelector('main#kontakKu form')[1];
-const formDeskripsi = parentKontak.querySelector('main#kontakKu form')[2];
-const buttonKontak = parentKontak.querySelector('main#kontakKu form button');
-// animasi untuk file kontak
-document.addEventListener('DOMContentLoaded', () => {
-    pengantar.classList.add('loadingAnimasiKiri');
-    pembuka.classList.add('loadingAnimasiKanan');
-    formNama.classList.add('loadingAnimasiKiri');
-    formEmail.classList.add('loadingAnimasiKanan');
-    formDeskripsi.classList.add('loadingAnimasiKiri');
-    buttonKontak.classList.add('loadingAnimasiKanan');
-})
+// for (let i = 0; i < 3; i++) {
+//     let li = document.getElementsByTagName('li')[i].addEventListener("click", function() {
+//         document.getElementsByTagName('a')[i].classList.add('warnaNavbarKlick')
+//     })
+// }
