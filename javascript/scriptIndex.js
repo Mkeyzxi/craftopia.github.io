@@ -57,25 +57,26 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // scroll di bagian landing page
 window.addEventListener('scroll', () => {
-    let scrollTop = parseInt(window.scrollY) * 50;
+    let scrollTop = parseInt(window.scrollY) * 10;
     if (scrollTop > 0) {
-        parent.querySelector('header').style.boxShadow = '0px 0px 100px 0px #29244d'
+        parent.querySelector('header').style.boxShadow = '0 0px 15px #29244d'
         parent.querySelector('header').style.transition = 'all .3s ease-out';
     }
-    if (scrollTop > 50) {
-        parent.querySelector('header').style.boxShadow = '0 0px 15px #29244d'
+    if (scrollTop > 220) {
         sectionDuaImg.classList.add('loadingAnimasiKiri');
     }
-    if (scrollTop > 140) {
+    if (scrollTop > 320) {
         sectionDuaImg.classList.add('loadingAnimasiKiri');
-        parent.querySelector('header').style.boxShadow = '0 0px 15px #29244d';
+        // parent.querySelector('header').style.boxShadow = '0 0px 15px #29244d';
         sectionDuaH3.classList.add('loadingAnimasiKanan');
         sectionDuaP.classList.add('loadingAnimasiKiri');
     } else {
+        parent.querySelector('header').style.boxShadow = ''
+
         sectionDuaImg.classList.remove('loadingAnimasiKiri');
         sectionDuaH3.classList.remove('loadingAnimasiKanan');
         sectionDuaP.classList.remove('loadingAnimasiKiri');
-        parent.querySelector('header').style.boxShadow = ''
+        // parent.querySelector('header').style.boxShadow = ''
     }
 });
 
