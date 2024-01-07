@@ -22,6 +22,7 @@
     }
     
      :root {
+        --secondari: #A11B1B;
         --primary: #E48F45;
         --hover: #29244d;
         --hover2: #ff2b95;
