@@ -22,8 +22,7 @@
     }
     
      :root {
-        --secondari: #A11B1B;
-        --primary: #E48F45;
+        --primary: #A11B1B;
         --hover: #29244d;
         --hover2: #ff2b95;
         --white: #fff;
@@ -76,7 +75,7 @@
         -o-transition: all .5s ease-in-out;
     }
     
-    header .contact {
+    header .contact ul {
         display: flex;
         column-gap: 1.2em;
     }
@@ -160,18 +159,16 @@
         -moz-border-radius: 5px;
         -ms-border-radius: 5px;
         -o-border-radius: 5px;
-        border: 5px double var(--primary);
     }
     
     main section.sectionSatu .home a:hover {
-        color: var(--hover);
-        background-color: var(--primary);
+        color: var(--white);
+        background-color: var(--hover);
         transition: all .5 ease-in;
         -webkit-transition: all .5 ease-in;
         -moz-transition: all .5 ease-in;
         -ms-transition: all .5 ease-in;
         -o-transition: all .5 ease-in;
-        border: 5px double var(--hover2);
     }
     
     main section.sectionSatu img,
@@ -244,9 +241,19 @@
     
     main#katalogKu article ul li a {
         text-decoration: none;
+        color: var(--hover);
+        padding: 4px;
     }
     
-    main#katalogKu article ul li a:hover {}
+    main#katalogKu article ul li a:hover {
+        color: var(--white);
+        background-color: var(--hover);
+        border-radius: 5px 10px 5px 5px;
+        -webkit-border-radius: 5px 10px 5px 5px;
+        -moz-border-radius: 5px 10px 5px 5px;
+        -ms-border-radius: 5px 10px 5px 5px;
+        -o-border-radius: 5px 10px 5px 5px;
+    }
     
     main#katalogKu .pembagian {
         width: 80%;
@@ -374,6 +381,7 @@
         justify-content: center;
         align-items: center;
         background-color: var(--primary);
+        color: var(--white);
     }
     /* akhir footer */
     /* kombinasi warna di javascript */
